@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void checked(View view)
+    public void cheese(View view)
     {
         if(checkBox.isChecked())
         {
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void button(View view)
+    public void calorieChecker(View view)
     {
         String burgerCalories = String.valueOf(burger.totalBurgerCal());
         burgerCalories += " Calories";
