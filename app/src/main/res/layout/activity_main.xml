@@ -4,15 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.729" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="412dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="356dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/patties"
+        android:layout_width="387dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/single_patty_radio"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Single Patty"
+            android:textColorLink="#05386B"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/double_patty_radio"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="Double Patty"
+            android:textColorLink="#05386B"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/veggie_patty_radio"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:text="Veggie Patty"
+            android:textColorLink="#05386B"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="358dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="37dp"
+        android:background="#05386B"
+        android:fontFamily="monospace"
+        android:onClick="button"
+        android:text="calculate"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#EDF5E1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="387dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:background="#005CDB95"
+        android:onClick="checked"
+        android:text="Cheese"
+        android:textAlignment="textStart"
+        android:textColorLink="#05386B"
+        android:textCursorDrawable="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patties" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="376dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="16dp"
+        android:text="Burger Calorie Counter"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#EDF5E1"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/patties"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
