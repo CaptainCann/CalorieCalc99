@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         checkBox = (CheckBox)findViewById(R.id.checkBox);
         seekBar = (SeekBar)findViewById(R.id.seekBar);
 
-        pattyType.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+             pattyType.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int id) {
                 switch (id)
